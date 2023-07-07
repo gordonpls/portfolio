@@ -12,7 +12,7 @@ module.exports = {
     require('@tailwindcss/aspect-ratio')
   ],
   daisyui: {
-    themes: ['corporate', 'night', 'winter', 'dark', "lofi", "black"]
+    themes: ['corporate',  "black"]
   },
 }
 
