@@ -9,7 +9,6 @@ function App() {
         <Main />
       </div>
       <div className="self-center">
-        {/* <progress className="progress w-96"></progress> */}
       </div>
     </div>
   );

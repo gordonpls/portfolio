@@ -21,7 +21,7 @@ const ProfileCard = () => {
                     <div className="flex flex-row justify-center gap-4 py-4">
                         <div className="badge badge-secondary text-white">INFJ-A</div>
                         <div className="badge badge-secondary text-white">Libra</div>
-                        <div className="badge badge-secondary text-white">Night Owl</div>
+                        <div className="badge badge-secondary text-white">Foodie</div>
                     </div>
                     <ProfileInfo emailAddress="gordon@zhong.ventures" />
                 </div>
