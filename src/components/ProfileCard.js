@@ -25,9 +25,12 @@ const ProfileCard = () => {
                     {/* Open the modal using ID.showModal() method */}
                     <button className="btn btn-primary uppercase" onClick={() => window.resume_modal.showModal()}>View Resume</button>
                     <dialog id="resume_modal" className="modal">
-                        <form method="dialog" className="modal-box max-h-none max-w-none h-fit w-fit md:h-[50vw] md:w-[60vw] overflow-auto">
+                        <form method="dialog" className="modal-box max-h-none max-w-none h-fit w-fit md:h-[50vw] md:w-[60vw] overflow-auto invisible md:visible">
                             <button className="btn btn-sm btn-circle btn-ghost absolute right-1 top-1">✕</button>
                             <iframe src={resume} height="100%" width="100%" allowFullScreen={true}></iframe>
+                        </form>
+                        <form method="dialog" className="max-h-none max-w-none overflow-auto visible md:invisible">
+                            <iframe src={resume} allowFullScreen={true}></iframe>
                         </form>
                         <form method="dialog" className="modal-backdrop">
                             <button>close</button>
