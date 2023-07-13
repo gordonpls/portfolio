@@ -19,7 +19,7 @@ const ProfileInfo = ({ emailAddress }) => {
                     <div className="flex flex-col">
                         <span className="text-xs text-gray-500 text-left">Email:</span>
                         <div className="flex flex-col cursor-pointer select-none" onClick={toggleEmailVisibility}>
-                            <div className={`${isEmailVisible ? '' : 'tooltip tooltip-open tooltip-right tooltip-primary'}`} data-tip="Click to reveal">
+                            <div className={`${isEmailVisible ? '' : 'tooltip tooltip-open sm:tooltip-top md:tooltip-right tooltip-primary mt-2 md:mt-0'}`} data-tip="Click to reveal">
                                 <span className={`text-secondary-focus ${isEmailVisible ? '' : 'blur-sm animate-pulse bg-black opacity-50 rounded-full'}`}>{emailAddress}</span>
                             </div>
                         </div>

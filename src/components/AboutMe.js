@@ -4,7 +4,7 @@ const AboutMe = () => {
     return (
         <article className="prose">
             <div className="text-primary">
-                <div className="flex flex-row justify-between">
+                <div className="flex flex-row justify-between p-2">
                     <h1 className="text-xl text-primary-focus">About Me</h1>
                     <ThemeChanger />
                 </div>

@@ -12,7 +12,7 @@ const Main = () => (
                 </div>
                 <div className="flex flex-col col-start-1 md:row-start-1 md:col-start-2 mx-2">
                     <AboutMe />
-                    <div className="py-2 md:py-8"></div>
+                    <div className="p-2 md:p-8"></div>
                     <CurrentProject />
                 </div>
             </div>
