@@ -23,7 +23,7 @@ const ProfileCard = () => {
                         <div className="badge badge-secondary text-white">Libra</div>
                         <div className="badge badge-secondary text-white">Night Owl</div>
                     </div>
-                    <ProfileInfo emailAddress="GordonZhongCodes@gmail.com" />
+                    <ProfileInfo emailAddress="gordon@zhong.ventures" />
                 </div>
                 <div className="pt-8">
                     <BrowserView>
