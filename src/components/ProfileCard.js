@@ -1,5 +1,5 @@
 import ProfileInfo from "../subcomponents/ProfileCard/ProfileInfo";
-import LifeQuote from './LifeQuote';
+import LifeQuote from '../subcomponents/AboutMe/LifeQuote';
 import avatar from '../assets/avatar.jpeg';
 import resume from '../assets/gordon_zhong_resume.pdf';
 
@@ -25,7 +25,7 @@ const ProfileCard = () => {
                     {/* Open the modal using ID.showModal() method */}
                     <button className="btn btn-primary uppercase" onClick={() => window.resume_modal.showModal()}>View Resume</button>
                     <dialog id="resume_modal" className="modal">
-                        <form method="dialog" className="modal-box h-fit w-fit md:h-[50vw] md:w-[60vw] max-h-none max-w-none">
+                        <form method="dialog" className="modal-box md:h-[50vw] md:w-[60vw] max-h-none max-w-none">
                             <button className="btn btn-sm btn-circle btn-ghost absolute right-1 top-1">✕</button>
                             <iframe src={resume} height="100%" width="100%" allowFullScreen={true}></iframe>
                         </form>

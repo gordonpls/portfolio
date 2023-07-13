@@ -4,7 +4,13 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}"
   ],
-  theme: {},
+  theme: {
+    extend: {
+      animation: {
+        'pulse-slow': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;'
+      }
+    },
+  },
   plugins: [
     require('@tailwindcss/typography'),
     require("daisyui"),
@@ -12,7 +18,7 @@ module.exports = {
     require('@tailwindcss/aspect-ratio')
   ],
   daisyui: {
-    themes: ['corporate',  "black"]
+    themes: ['corporate', "black"]
   },
 }
 
