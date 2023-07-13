@@ -1,7 +1,11 @@
+import { BrowserView, MobileView } from 'react-device-detect';
+
 import ProfileInfo from "../subcomponents/ProfileCard/ProfileInfo";
 import LifeQuote from '../subcomponents/AboutMe/LifeQuote';
 import avatar from '../assets/avatar.jpeg';
 import resume from '../assets/gordon_zhong_resume.pdf';
+
+const ResumeURL = 'https://drive.google.com/file/d/1yGJ3dQFAbppkOuUj9vHpaObKWCFG6yGe/view?usp=drive_link';
 
 const ProfileCard = () => {
     return (
@@ -22,20 +26,24 @@ const ProfileCard = () => {
                     <ProfileInfo emailAddress="GordonZhongCodes@gmail.com" />
                 </div>
                 <div className="pt-8">
-                    {/* Open the modal using ID.showModal() method */}
-                    <button className="btn btn-primary uppercase" onClick={() => window.resume_modal.showModal()}>View Resume</button>
-                    <dialog id="resume_modal" className="modal">
-                        <form method="dialog" className="modal-box max-h-none max-w-none h-fit w-fit md:h-[50vw] md:w-[60vw] overflow-auto invisible md:visible">
-                            <button className="btn btn-sm btn-circle btn-ghost absolute right-1 top-1">✕</button>
-                            <iframe src={resume} height="100%" width="100%" allowFullScreen={true}></iframe>
+                    <BrowserView>
+                        {/* Open the modal using ID.showModal() method */}
+                        <button className="btn btn-primary uppercase" onClick={() => window.resume_modal.showModal()}>View Resume</button>
+                        <dialog id="resume_modal" className="modal">
+                            <form method="dialog" className="modal-box max-h-none max-w-none h-fit w-fit md:h-[50vw] md:w-[60vw] overflow-auto">
+                                <button className="btn btn-sm btn-circle btn-ghost absolute right-1 top-1">✕</button>
+                                <iframe src={resume} height="100%" width="100%" allowFullScreen={true}></iframe>
+                            </form>
+                            <form method="dialog" className="modal-backdrop">
+                                <button>close</button>
+                            </form>
+                        </dialog>
+                    </BrowserView>
+                    <MobileView>
+                        <form action={ResumeURL} target="_blank">
+                        <button className="btn btn-primary uppercase" type="submit">View Resume</button>
                         </form>
-                        <form method="dialog" className="max-h-none max-w-none overflow-auto visible md:invisible">
-                            <iframe src={resume} allowFullScreen={true}></iframe>
-                        </form>
-                        <form method="dialog" className="modal-backdrop">
-                            <button>close</button>
-                        </form>
-                    </dialog>
+                    </MobileView>
                     <div className="text-center">
                         <LifeQuote />
                     </div>
