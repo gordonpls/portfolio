@@ -1,19 +1,37 @@
 import { BrowserView, MobileView } from 'react-device-detect';
+import { useEffect, useState } from 'react';
 
 import ProfileInfo from "../subcomponents/ProfileCard/ProfileInfo";
 import LifeQuote from '../subcomponents/AboutMe/LifeQuote';
-import avatar from '../assets/avatar.jpeg';
 import resume from '../assets/gordon_zhong_resume.pdf';
+import ThemeChanger from "./ThemeChanger";
 
 const ResumeURL = 'https://drive.google.com/file/d/1yGJ3dQFAbppkOuUj9vHpaObKWCFG6yGe/view?usp=drive_link';
 
 const ProfileCard = () => {
+    const src = '/avatar.jpeg';
+    const [loaded, setLoaded] = useState(false);
+
+    useEffect(() => {
+        const image = new Image();
+        image.src = src;
+        image.onload = () => setLoaded(true);
+        image.onerror = () => console.error('An error occurred while loading the image');
+    }, [src]);
+
+    const [showImageModal, setShowImageModal] = useState(false);
     return (
         <div className="h-[650px]">
-            <div className="text-center rounded-lg artboard h-full bg-primary-content ring-4 ring-primary ring-offset-4">
+            <div className="relative text-center rounded-lg artboard h-full bg-primary-content ring-4 ring-primary ring-offset-4">
+                <MobileView>
+                    <div className="absolute top-0 right-0 m-4"> {/* Absolute positioned ThemeChanger */}
+                        <ThemeChanger />
+                    </div>
+                </MobileView>
                 <div className="avatar">
-                    <div className="w-32 rounded-xl ring-2 ring-primary ring-offset-4" style={{ transform: 'translateY(-20px)' }}>
-                        <img src={avatar} alt="avatar" />
+                    <div className="w-32 rounded-xl ring-2 ring-primary ring-offset-4" style={{ transform: 'translateY(-20px)' }}
+                        onClick={() => setShowImageModal(true)}>
+                        {loaded ? <img src={src} alt="avatar" /> : <span className="loading loading-spinner text-primary"></span>}
                     </div>
                 </div>
                 <div>
@@ -41,7 +59,7 @@ const ProfileCard = () => {
                     </BrowserView>
                     <MobileView>
                         <form action={ResumeURL} target="_blank">
-                        <button className="btn btn-primary uppercase" type="submit">View Resume</button>
+                            <button className="btn btn-primary uppercase" type="submit">View Resume</button>
                         </form>
                     </MobileView>
                     <div className="text-center">
@@ -49,6 +67,13 @@ const ProfileCard = () => {
                     </div>
                 </div>
             </div>
+            <dialog open={showImageModal} className="modal" onClick={() => setShowImageModal(false)}>
+                <form method="dialog" className="modal-box md:h-fit md:w-fit p-2">
+                    <button className="btn btn-md btn-circle btn-ghost absolute right-1 top-1" onClick={() => setShowImageModal(false)}>x</button>
+                    <img src={src} alt="avatar" />
+                </form>
+            </dialog>
+
         </div>
 
     )

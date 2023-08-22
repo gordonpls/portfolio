@@ -2,13 +2,17 @@ const CurrentProject = () => {
     return (
         <article className="prose">
             <div className="text-primary">
-                <div className="flex flex-row justify-between">
-                    <h1 className="text-xl text-primary-focus">Current Project:</h1>
+                <div className="flex flex-row justify-between p-2">
+                    <h1 className="text-xl text-primary-focus">Current Project</h1>
                 </div>
                 <div className="grid grid-cols-2 gap-4 ring-4 ring-primary ring-offset-4 rounded-md p-4 bg-primary-content">
                     <div className="flex flex-col items-center font-mono ring-2 ring-accent ring-offset-2 rounded-sm">
                         <p className="text-2xl text-primary">Cutique</p>
-                        <button className="btn btn-primary w-36 disabled:bg-error disabled:text-white disabled:opacity-50 uppercase mb-2" disabled>Coming Soon!</button>
+                        <a className="decoration-0 text-white" href="https://cutique.co" target="_blank" rel="noreferrer">
+                        <button className="btn btn-primary uppercase w-36 disabled:bg-error disabled:text-white disabled:opacity-50 uppercase mb-2">
+                            Visit!
+                        </button>
+                        </a>
                     </div>
                     <div className="self-center pt-0 md:pt-2 text-center">
                         <progress className="progress progress-primary w-40"></progress>
