@@ -3,10 +3,10 @@ import { useEffect, useState } from 'react';
 
 import ProfileInfo from "../subcomponents/ProfileCard/ProfileInfo";
 import LifeQuote from '../subcomponents/AboutMe/LifeQuote';
-import resume from '../assets/gordon_zhong_resume.pdf';
+import resume from '../assets/resume.pdf';
 import ThemeChanger from "./ThemeChanger";
 
-const ResumeURL = 'https://drive.google.com/file/d/1yGJ3dQFAbppkOuUj9vHpaObKWCFG6yGe/view?usp=drive_link';
+const ResumeURL = 'https://drive.google.com/file/d/1Lcm2CA9-jYUFfO79NZHaKLGU-yAKUWfK/view?usp=drive_link';
 
 const ProfileCard = () => {
     const src = '/avatar.jpeg';
@@ -28,8 +28,8 @@ const ProfileCard = () => {
                         <ThemeChanger />
                     </div>
                 </MobileView>
-                <div className="avatar">
-                    <div className="w-32 rounded-xl ring-2 ring-primary ring-offset-4" style={{ transform: 'translateY(-20px)' }}
+                <div className="avatar select-none">
+                    <div className="w-32 rounded-xl ring-2 ring-primary ring-offset-4 select-none" style={{ transform: 'translateY(-20px)' }}
                         onClick={() => setShowImageModal(true)}>
                         {loaded ? <img src={src} alt="avatar" /> : <span className="loading loading-spinner text-primary"></span>}
                     </div>
@@ -67,7 +67,7 @@ const ProfileCard = () => {
                     </div>
                 </div>
             </div>
-            <dialog open={showImageModal} className="modal" onClick={() => setShowImageModal(false)}>
+            <dialog open={showImageModal} className="modal select-none" onClick={() => setShowImageModal(false)}>
                 <form method="dialog" className="modal-box md:h-fit md:w-fit p-2">
                     <button className="btn btn-md btn-circle btn-ghost absolute right-1 top-1" onClick={() => setShowImageModal(false)}>x</button>
                     <img src={src} alt="avatar" />
