@@ -1,11 +1,11 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 const ProfileInfo = ({ emailAddress }) => {
-    const [isEmailVisible, setEmailVisible] = useState(false);
+    // const [isEmailVisible, setEmailVisible] = useState(false);
 
-    const toggleEmailVisibility = () => {
-        setEmailVisible(!isEmailVisible);
-    };
+    // const toggleEmailVisibility = () => {
+    //     setEmailVisible(!isEmailVisible);
+    // };
 
     return (
         <div className="space-y-8 ml-4 mr-4 bg-gray-200 p-4 rounded-md border-2 border-primary">
@@ -18,11 +18,12 @@ const ProfileInfo = ({ emailAddress }) => {
                     </div>
                     <div className="flex flex-col">
                         <span className="text-xs text-gray-500 text-left">Email:</span>
-                        <div className="flex flex-col cursor-pointer select-none" onClick={toggleEmailVisibility}>
-                            <div className={`${isEmailVisible ? '' : 'tooltip tooltip-open sm:tooltip-top md:tooltip-right tooltip-primary mt-2 md:mt-0'}`} data-tip="Click to reveal">
+                        {/* <div className="flex flex-col cursor-pointer select-none" onClick={toggleEmailVisibility}>
+                            <div onClick={toggleEmailVisibility} className={`${isEmailVisible ? '' : 'tooltip tooltip-open sm:tooltip-top md:tooltip-right tooltip-primary mt-2 md:mt-0'}`} data-tip="Click to reveal">
                                 <span className={`text-secondary-focus ${isEmailVisible ? '' : 'blur-sm animate-pulse bg-black opacity-50 rounded-full'}`}>{emailAddress}</span>
                             </div>
-                        </div>
+                        </div> */}
+                        <span className={`text-secondary-focus`}>{emailAddress}</span>
                     </div>
                 </div>
             </div>

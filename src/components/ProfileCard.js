@@ -3,10 +3,11 @@ import { useEffect, useState } from 'react';
 
 import ProfileInfo from "../subcomponents/ProfileCard/ProfileInfo";
 import LifeQuote from '../subcomponents/AboutMe/LifeQuote';
-import resume from '../assets/resume.pdf';
+import resume from '../assets/resume 6-25-2024.pdf';
 import ThemeChanger from "./ThemeChanger";
 
-const ResumeURL = 'https://drive.google.com/file/d/1Lcm2CA9-jYUFfO79NZHaKLGU-yAKUWfK/view?usp=drive_link';
+// const ResumeURL = 'https://drive.google.com/file/d/1Lcm2CA9-jYUFfO79NZHaKLGU-yAKUWfK/view?usp=drive_link';
+const ResumeURL = 'https://drive.google.com/file/d/1SQPlAkm5pWUYKA3LmVPkutXNbG8cVwr3/view?usp=drive_link';
 
 const ProfileCard = () => {
     const src = '/avatar.jpeg';
