@@ -37,7 +37,7 @@ const ProfileInfo = ({ emailAddress }) => {
                     </div>
                     <div className="flex flex-col">
                         <span className="text-xs text-gray-500 text-left">Location:</span>
-                        <span className="text-secondary-focus">Denver, CO</span>
+                        <span className="text-secondary-focus">Las Vegas, NV</span>
                     </div>
                 </div>
             </div>
