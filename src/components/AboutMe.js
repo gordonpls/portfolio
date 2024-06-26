@@ -13,9 +13,9 @@ const AboutMe = () => {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ring-4 ring-primary ring-offset-4 rounded-md p-4 bg-primary-content">
                     <div>
-                        <p className="text-left">Hey there! My name is Gordon and I&#39;m a software developer based in Denver.
-                            Right now, I&#39;m pursuing an M.B.A. and venturing into entreprenurial pursuits.</p>
-                        <p className="text-left">I&#39;m a curious 26 year old who wishes to explore and learn more about the world we live in.</p>
+                        <p className="text-left">Hey there! My name is Gordon and I&#39;m a software developer based in Denver and Las Vegas. 
+                            Currently pursuing an M.B.A. and venturing into entreprenurial waters.</p>
+                        <p className="text-left">I am a curious 26 year old who wishes to explore and learn more about the world we live in.</p>
                     </div>
                     <div className="self-center ring-2 ring-accent ring-offset-2 rounded-sm ">
                         <ol className="list-none text-center -indent-8 text-secondary">

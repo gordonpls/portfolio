@@ -7,12 +7,12 @@ const CurrentProject = () => {
                 </div>
                 <div className="grid grid-cols-2 gap-4 ring-4 ring-primary ring-offset-4 rounded-md p-4 bg-primary-content">
                     <div className="flex flex-col items-center font-mono ring-2 ring-accent ring-offset-2 rounded-sm">
-                        <p className="text-2xl text-primary">Cutique</p>
-                        <a className="decoration-0 text-white" href="https://cutique.co" target="_blank" rel="noreferrer">
-                        <button className="btn btn-primary uppercase w-36 disabled:bg-error disabled:text-white disabled:opacity-50 uppercase mb-2">
-                            Visit!
+                        <p className="text-2xl text-primary">*******</p>
+                        {/* <a className="decoration-0 text-white" href="https://cutique.co" target="_blank" rel="noreferrer"> */}
+                        <button disabled className="btn btn-primary uppercase w-36 disabled:bg-error disabled:text-white disabled:opacity-50 uppercase mb-2">
+                        soon!&trade;
                         </button>
-                        </a>
+                        {/* </a> */}
                     </div>
                     <div className="self-center pt-0 md:pt-2 text-center">
                         <progress className="progress progress-primary w-40"></progress>
