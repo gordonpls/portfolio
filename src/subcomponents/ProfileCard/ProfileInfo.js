@@ -53,7 +53,7 @@ const ProfileInfo = ({ emailAddress }) => {
                     </div>
                     <div className="flex flex-col">
                         <span className="text-xs text-gray-500 text-left">LinkedIn:</span>
-                        <a className="text-secondary-focus" href="http://linkedin.com/in/gordonzhongcodes" target="blank">Let&#39;s connect!</a>
+                        <a className="text-secondary-focus" href="http://linkedin.com/in/gordon-zhong" target="blank">Let&#39;s connect!</a>
                     </div>
                 </div>
             </div>

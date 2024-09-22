@@ -3,11 +3,14 @@ import { useEffect, useState } from 'react';
 
 import ProfileInfo from "../subcomponents/ProfileCard/ProfileInfo";
 import LifeQuote from '../subcomponents/AboutMe/LifeQuote';
-import resume from '../assets/resume 6-25-2024.pdf';
+
 import ThemeChanger from "./ThemeChanger";
 
-// const ResumeURL = 'https://drive.google.com/file/d/1Lcm2CA9-jYUFfO79NZHaKLGU-yAKUWfK/view?usp=drive_link';
-const ResumeURL = 'https://drive.google.com/file/d/1SQPlAkm5pWUYKA3LmVPkutXNbG8cVwr3/view?usp=drive_link';
+// resumeAsset is for browser view
+import ResumeAsset from '../assets/resume 6-25-2024.pdf';
+
+// for mobile view
+const ResumeURL = 'https://drive.google.com/file/d/1UG3QI0hlq4tVhtIevGanw6oV2wn8MUQI/view?usp=drive_link';
 
 const ProfileCard = () => {
     const src = '/avatar.jpeg';
@@ -24,11 +27,11 @@ const ProfileCard = () => {
     return (
         <div className="h-[650px]">
             <div className="relative text-center rounded-lg artboard h-full bg-primary-content ring-4 ring-primary ring-offset-4">
-                <MobileView>
+                {/* <MobileView> */}
                     <div className="absolute top-0 right-0 m-4"> {/* Absolute positioned ThemeChanger */}
                         <ThemeChanger />
                     </div>
-                </MobileView>
+                {/* </MobileView> */}
                 <div className="avatar select-none">
                     <div className="w-32 rounded-xl ring-2 ring-primary ring-offset-4 select-none" style={{ transform: 'translateY(-20px)' }}
                         onClick={() => setShowImageModal(true)}>
@@ -38,7 +41,7 @@ const ProfileCard = () => {
                 <div>
                     <p className="text-primary text-2xl">Gordon Zhong</p>
                     <div className="flex flex-row justify-center gap-4 py-4">
-                        <div className="badge badge-secondary text-white">INFJ-A</div>
+                        <div className="badge badge-secondary text-white">ENTJ-A</div>
                         <div className="badge badge-secondary text-white">Libra</div>
                         <div className="badge badge-secondary text-white">Foodie</div>
                     </div>
@@ -49,9 +52,10 @@ const ProfileCard = () => {
                         {/* Open the modal using ID.showModal() method */}
                         <button className="btn btn-primary uppercase" onClick={() => window.resume_modal.showModal()}>View Resume</button>
                         <dialog id="resume_modal" className="modal">
-                            <form method="dialog" className="modal-box max-h-none max-w-none h-fit w-fit md:h-[50vw] md:w-[60vw] overflow-auto">
+                            {/* <form method="dialog" className="modal-box max-h-none max-w-none h-fit w-fit md:h-[50vw] md:w-[60vw] overflow-auto"> */}
+                            <form method="dialog" className="modal-box max-h-none max-w-none h-[100vh] w-[100vw] overflow-hidden">
                                 <button className="btn btn-sm btn-circle btn-ghost absolute right-1 top-1">✕</button>
-                                <iframe src={resume} height="100%" width="100%" allowFullScreen={true}></iframe>
+                                <iframe src={ResumeAsset} height="100%" width="100%" allowFullScreen={true}></iframe>
                             </form>
                             <form method="dialog" className="modal-backdrop">
                                 <button>close</button>

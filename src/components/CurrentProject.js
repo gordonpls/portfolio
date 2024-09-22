@@ -15,9 +15,9 @@ const CurrentProject = () => {
                         {/* </a> */}
                     </div>
                     <div className="self-center pt-0 md:pt-2 text-center">
-                        <progress className="progress progress-primary w-40"></progress>
                         <progress className="progress progress-primary w-40" value="25" max="100"></progress>
                         <progress className="progress progress-primary w-40" value="50" max="100"></progress>
+                        <progress className="progress progress-primary w-40"></progress>
                         <progress className="progress progress-primary w-40" value="75" max="100"></progress>
                         <progress className="progress progress-primary w-40" value="100" max="100"></progress>
                     </div>
