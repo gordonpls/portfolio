@@ -7,7 +7,7 @@ import LifeQuote from '../subcomponents/AboutMe/LifeQuote';
 import ThemeChanger from "./ThemeChanger";
 
 // resumeAsset is for browser view
-import ResumeAsset from '../assets/resume 6-25-2024.pdf';
+import ResumeAsset from '../assets/Gordon Zhong Resume.pdf';
 
 // for mobile view
 const ResumeURL = 'https://drive.google.com/file/d/1UG3QI0hlq4tVhtIevGanw6oV2wn8MUQI/view?usp=drive_link';
